@@ -43,3 +43,10 @@ Target outputs: `out/heatops-final.mp4`, `out/heatops-captions.srt`, `out/heatop
 Review with sound, then muted with captions; verify no black gaps, missing fonts, clipped UI, stale placeholders, missing audio, or exposed credentials. Keep music optional and low enough for speech to remain clear. Use only owned or licensed assets with credits.
 
 Track V-task status and evidence in video-tasks.md. Report draft assets separately from final exports. Do not claim a video exists after writing only a storyboard. The user handles external upload/submission unless explicitly requested otherwise.
+
+## Direction update from Vansh (2026-10-09)
+
+The video sells the product: problem → how HeatOps fixes it → AWS architecture.
+- Narration and overlays don't explain synthetic versus real data. The app's own source badge stays visible in real captures, and the opening calls the site a "sample site". The no-fabrication and evidence rules above still apply in full.
+- Natural local AI narration (Kokoro, stock voice) is the current draft voice. Vansh decides between it and his own recording for the final.
+- See video.md for the revised 22/12/18/30/16/20/14/22/8/8-second skeleton.

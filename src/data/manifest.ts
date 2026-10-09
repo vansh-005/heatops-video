@@ -49,7 +49,14 @@ export type Manifest = {
   readonly mode: "draft" | "final";
   readonly facts: Facts;
   readonly clips: readonly Clip[];
-  readonly narration: { path: string; status: "missing" | "ready"; finalApproved: boolean; offsetSeconds?: number };
+  readonly narration: {
+    kind: "tts" | "recorded";
+    path: string;
+    status: "missing" | "draft" | "ready";
+    finalApproved: boolean;
+    offsetSeconds?: number;
+  };
+  readonly music?: { enabled: boolean };
   readonly finalRenderAllowed: boolean;
 };
 

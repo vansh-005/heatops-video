@@ -1,0 +1,1756 @@
+{
+ "engine": "kokoro-82m",
+ "voice": "af_heart",
+ "scenes": {
+  "S01": {
+   "file": "audio/voice/S01.wav",
+   "lead": 1.0,
+   "duration": 18.225,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "Tomorrow",
+     "start": 0.275,
+     "end": 0.8
+    },
+    {
+     "w": "45",
+     "start": 0.887,
+     "end": 1.525
+    },
+    {
+     "w": "workers",
+     "start": 1.525,
+     "end": 1.925
+    },
+    {
+     "w": "are",
+     "start": 1.925,
+     "end": 2.062
+    },
+    {
+     "w": "scheduled",
+     "start": 2.062,
+     "end": 2.575
+    },
+    {
+     "w": "outdoors",
+     "start": 2.575,
+     "end": 3.15
+    },
+    {
+     "w": "at",
+     "start": 3.15,
+     "end": 3.275
+    },
+    {
+     "w": "Yamuna",
+     "start": 3.275,
+     "end": 3.625
+    },
+    {
+     "w": "Works",
+     "start": 3.625,
+     "end": 3.975
+    },
+    {
+     "w": "in",
+     "start": 3.975,
+     "end": 4.1
+    },
+    {
+     "w": "Delhi",
+     "start": 4.1,
+     "end": 4.85
+    },
+    {
+     "w": "By",
+     "start": 4.987,
+     "end": 5.188
+    },
+    {
+     "w": "one",
+     "start": 5.188,
+     "end": 5.463
+    },
+    {
+     "w": "p.m.",
+     "start": 5.463,
+     "end": 6.125
+    },
+    {
+     "w": "it",
+     "start": 6.225,
+     "end": 6.312
+    },
+    {
+     "w": "will",
+     "start": 6.312,
+     "end": 6.463
+    },
+    {
+     "w": "feel",
+     "start": 6.463,
+     "end": 6.725
+    },
+    {
+     "w": "like",
+     "start": 6.725,
+     "end": 6.963
+    },
+    {
+     "w": "forty-one",
+     "start": 6.963,
+     "end": 7.425
+    },
+    {
+     "w": "degrees",
+     "start": 7.425,
+     "end": 8.175
+    },
+    {
+     "w": "right",
+     "start": 8.287,
+     "end": 8.537
+    },
+    {
+     "w": "when",
+     "start": 8.537,
+     "end": 8.713
+    },
+    {
+     "w": "half",
+     "start": 8.713,
+     "end": 9.0
+    },
+    {
+     "w": "the",
+     "start": 9.0,
+     "end": 9.1
+    },
+    {
+     "w": "day's",
+     "start": 9.1,
+     "end": 9.375
+    },
+    {
+     "w": "work",
+     "start": 9.375,
+     "end": 9.588
+    },
+    {
+     "w": "is",
+     "start": 9.588,
+     "end": 9.725
+    },
+    {
+     "w": "planned",
+     "start": 9.725,
+     "end": 10.5
+    },
+    {
+     "w": "A",
+     "start": 10.662,
+     "end": 10.787
+    },
+    {
+     "w": "heat",
+     "start": 10.787,
+     "end": 11.025
+    },
+    {
+     "w": "warning",
+     "start": 11.025,
+     "end": 11.45
+    },
+    {
+     "w": "tells",
+     "start": 11.45,
+     "end": 11.725
+    },
+    {
+     "w": "you",
+     "start": 11.725,
+     "end": 11.812
+    },
+    {
+     "w": "it's",
+     "start": 11.812,
+     "end": 11.925
+    },
+    {
+     "w": "going",
+     "start": 11.925,
+     "end": 12.137
+    },
+    {
+     "w": "to",
+     "start": 12.137,
+     "end": 12.213
+    },
+    {
+     "w": "be",
+     "start": 12.213,
+     "end": 12.363
+    },
+    {
+     "w": "hot",
+     "start": 12.363,
+     "end": 13.075
+    },
+    {
+     "w": "It",
+     "start": 13.175,
+     "end": 13.287
+    },
+    {
+     "w": "doesn't",
+     "start": 13.287,
+     "end": 13.55
+    },
+    {
+     "w": "tell",
+     "start": 13.55,
+     "end": 13.8
+    },
+    {
+     "w": "you",
+     "start": 13.8,
+     "end": 13.925
+    },
+    {
+     "w": "what",
+     "start": 13.925,
+     "end": 14.075
+    },
+    {
+     "w": "to",
+     "start": 14.075,
+     "end": 14.213
+    },
+    {
+     "w": "change",
+     "start": 14.213,
+     "end": 14.85
+    },
+    {
+     "w": "who",
+     "start": 14.95,
+     "end": 15.1
+    },
+    {
+     "w": "needs",
+     "start": 15.1,
+     "end": 15.375
+    },
+    {
+     "w": "to",
+     "start": 15.375,
+     "end": 15.5
+    },
+    {
+     "w": "know",
+     "start": 15.5,
+     "end": 15.95
+    },
+    {
+     "w": "or",
+     "start": 16.062,
+     "end": 16.225
+    },
+    {
+     "w": "whether",
+     "start": 16.225,
+     "end": 16.55
+    },
+    {
+     "w": "anyone",
+     "start": 16.55,
+     "end": 16.925
+    },
+    {
+     "w": "actually",
+     "start": 16.925,
+     "end": 17.35
+    },
+    {
+     "w": "did",
+     "start": 17.35,
+     "end": 17.525
+    },
+    {
+     "w": "it",
+     "start": 17.525,
+     "end": 17.975
+    }
+   ]
+  },
+  "S02": {
+   "file": "audio/voice/S02.wav",
+   "lead": 0.3,
+   "duration": 10.175,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "This",
+     "start": 0.275,
+     "end": 0.45
+    },
+    {
+     "w": "is",
+     "start": 0.45,
+     "end": 0.6
+    },
+    {
+     "w": "HeatOps",
+     "start": 0.6,
+     "end": 1.55
+    },
+    {
+     "w": "The",
+     "start": 1.65,
+     "end": 1.75
+    },
+    {
+     "w": "night",
+     "start": 1.75,
+     "end": 1.938
+    },
+    {
+     "w": "before",
+     "start": 1.938,
+     "end": 2.475
+    },
+    {
+     "w": "the",
+     "start": 2.55,
+     "end": 2.688
+    },
+    {
+     "w": "supervisor",
+     "start": 2.688,
+     "end": 3.362
+    },
+    {
+     "w": "sees",
+     "start": 3.362,
+     "end": 3.725
+    },
+    {
+     "w": "tomorrow's",
+     "start": 3.725,
+     "end": 4.237
+    },
+    {
+     "w": "plan",
+     "start": 4.237,
+     "end": 4.6
+    },
+    {
+     "w": "against",
+     "start": 4.6,
+     "end": 4.912
+    },
+    {
+     "w": "the",
+     "start": 4.912,
+     "end": 5.0
+    },
+    {
+     "w": "forecast",
+     "start": 5.0,
+     "end": 5.925
+    },
+    {
+     "w": "every",
+     "start": 6.062,
+     "end": 6.412
+    },
+    {
+     "w": "crew",
+     "start": 6.412,
+     "end": 6.875
+    },
+    {
+     "w": "every",
+     "start": 6.975,
+     "end": 7.287
+    },
+    {
+     "w": "task",
+     "start": 7.287,
+     "end": 7.85
+    },
+    {
+     "w": "and",
+     "start": 7.925,
+     "end": 8.062
+    },
+    {
+     "w": "every",
+     "start": 8.062,
+     "end": 8.387
+    },
+    {
+     "w": "hour",
+     "start": 8.387,
+     "end": 8.725
+    },
+    {
+     "w": "that",
+     "start": 8.725,
+     "end": 8.9
+    },
+    {
+     "w": "lands",
+     "start": 8.9,
+     "end": 9.213
+    },
+    {
+     "w": "in",
+     "start": 9.213,
+     "end": 9.287
+    },
+    {
+     "w": "the",
+     "start": 9.287,
+     "end": 9.375
+    },
+    {
+     "w": "heat",
+     "start": 9.375,
+     "end": 9.925
+    }
+   ]
+  },
+  "S03": {
+   "file": "audio/voice/S03.wav",
+   "lead": 0.6,
+   "duration": 14.25,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "One",
+     "start": 0.3,
+     "end": 0.525
+    },
+    {
+     "w": "click",
+     "start": 0.525,
+     "end": 0.95
+    },
+    {
+     "w": "and",
+     "start": 1.025,
+     "end": 1.137
+    },
+    {
+     "w": "the",
+     "start": 1.137,
+     "end": 1.225
+    },
+    {
+     "w": "HeatOps",
+     "start": 1.225,
+     "end": 1.762
+    },
+    {
+     "w": "agent",
+     "start": 1.762,
+     "end": 2.1
+    },
+    {
+     "w": "gets",
+     "start": 2.1,
+     "end": 2.35
+    },
+    {
+     "w": "to",
+     "start": 2.35,
+     "end": 2.45
+    },
+    {
+     "w": "work",
+     "start": 2.45,
+     "end": 2.975
+    },
+    {
+     "w": "It",
+     "start": 4.475,
+     "end": 4.6
+    },
+    {
+     "w": "pulls",
+     "start": 4.6,
+     "end": 4.912
+    },
+    {
+     "w": "the",
+     "start": 4.912,
+     "end": 5.012
+    },
+    {
+     "w": "forecast",
+     "start": 5.012,
+     "end": 5.8
+    },
+    {
+     "w": "reads",
+     "start": 5.938,
+     "end": 6.3
+    },
+    {
+     "w": "the",
+     "start": 6.3,
+     "end": 6.438
+    },
+    {
+     "w": "site's",
+     "start": 6.438,
+     "end": 6.775
+    },
+    {
+     "w": "constraints",
+     "start": 6.775,
+     "end": 7.525
+    },
+    {
+     "w": "and",
+     "start": 7.6,
+     "end": 7.725
+    },
+    {
+     "w": "compares",
+     "start": 7.725,
+     "end": 8.125
+    },
+    {
+     "w": "schedules",
+     "start": 8.125,
+     "end": 8.65
+    },
+    {
+     "w": "that",
+     "start": 8.65,
+     "end": 8.812
+    },
+    {
+     "w": "actually",
+     "start": 8.812,
+     "end": 9.262
+    },
+    {
+     "w": "fit",
+     "start": 9.262,
+     "end": 10.0
+    },
+    {
+     "w": "Its",
+     "start": 10.15,
+     "end": 10.375
+    },
+    {
+     "w": "first",
+     "start": 10.375,
+     "end": 10.637
+    },
+    {
+     "w": "idea",
+     "start": 10.637,
+     "end": 11.3
+    },
+    {
+     "w": "start",
+     "start": 11.438,
+     "end": 11.75
+    },
+    {
+     "w": "Crew",
+     "start": 11.75,
+     "end": 11.975
+    },
+    {
+     "w": "A",
+     "start": 11.975,
+     "end": 12.15
+    },
+    {
+     "w": "at",
+     "start": 12.15,
+     "end": 12.312
+    },
+    {
+     "w": "six",
+     "start": 12.312,
+     "end": 12.7
+    },
+    {
+     "w": "before",
+     "start": 12.75,
+     "end": 13.062
+    },
+    {
+     "w": "the",
+     "start": 13.062,
+     "end": 13.15
+    },
+    {
+     "w": "heat",
+     "start": 13.15,
+     "end": 13.35
+    },
+    {
+     "w": "builds",
+     "start": 13.35,
+     "end": 14.0
+    }
+   ]
+  },
+  "S04": {
+   "file": "audio/voice/S04.wav",
+   "lead": 0.9,
+   "duration": 24.35,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "But",
+     "start": 0.25,
+     "end": 0.362
+    },
+    {
+     "w": "the",
+     "start": 0.362,
+     "end": 0.487
+    },
+    {
+     "w": "supervisor",
+     "start": 0.487,
+     "end": 1.288
+    },
+    {
+     "w": "knows",
+     "start": 1.288,
+     "end": 1.6
+    },
+    {
+     "w": "something",
+     "start": 1.6,
+     "end": 1.863
+    },
+    {
+     "w": "the",
+     "start": 1.863,
+     "end": 1.962
+    },
+    {
+     "w": "forecast",
+     "start": 1.962,
+     "end": 2.525
+    },
+    {
+     "w": "doesn't",
+     "start": 2.525,
+     "end": 3.25
+    },
+    {
+     "w": "The",
+     "start": 3.375,
+     "end": 3.5
+    },
+    {
+     "w": "gate",
+     "start": 3.5,
+     "end": 3.8
+    },
+    {
+     "w": "doesn't",
+     "start": 3.8,
+     "end": 4.1
+    },
+    {
+     "w": "open",
+     "start": 4.1,
+     "end": 4.438
+    },
+    {
+     "w": "until",
+     "start": 4.438,
+     "end": 4.763
+    },
+    {
+     "w": "seven",
+     "start": 4.763,
+     "end": 5.425
+    },
+    {
+     "w": "So",
+     "start": 7.525,
+     "end": 7.638
+    },
+    {
+     "w": "they",
+     "start": 7.638,
+     "end": 7.812
+    },
+    {
+     "w": "change",
+     "start": 7.812,
+     "end": 8.2
+    },
+    {
+     "w": "it",
+     "start": 8.2,
+     "end": 8.625
+    },
+    {
+     "w": "The",
+     "start": 10.65,
+     "end": 10.775
+    },
+    {
+     "w": "old",
+     "start": 10.775,
+     "end": 11.05
+    },
+    {
+     "w": "plan",
+     "start": 11.05,
+     "end": 11.463
+    },
+    {
+     "w": "is",
+     "start": 11.463,
+     "end": 11.7
+    },
+    {
+     "w": "instantly",
+     "start": 11.7,
+     "end": 12.225
+    },
+    {
+     "w": "marked",
+     "start": 12.225,
+     "end": 12.55
+    },
+    {
+     "w": "outdated",
+     "start": 12.55,
+     "end": 13.4
+    },
+    {
+     "w": "and",
+     "start": 13.5,
+     "end": 13.613
+    },
+    {
+     "w": "the",
+     "start": 13.613,
+     "end": 13.738
+    },
+    {
+     "w": "agent",
+     "start": 13.738,
+     "end": 14.125
+    },
+    {
+     "w": "replans",
+     "start": 14.125,
+     "end": 14.75
+    },
+    {
+     "w": "around",
+     "start": 14.75,
+     "end": 15.062
+    },
+    {
+     "w": "the",
+     "start": 15.062,
+     "end": 15.15
+    },
+    {
+     "w": "new",
+     "start": 15.15,
+     "end": 15.325
+    },
+    {
+     "w": "constraint",
+     "start": 15.325,
+     "end": 16.15
+    },
+    {
+     "w": "Crew",
+     "start": 18.175,
+     "end": 18.487
+    },
+    {
+     "w": "A",
+     "start": 18.487,
+     "end": 18.675
+    },
+    {
+     "w": "now",
+     "start": 18.675,
+     "end": 18.975
+    },
+    {
+     "w": "starts",
+     "start": 18.975,
+     "end": 19.287
+    },
+    {
+     "w": "at",
+     "start": 19.287,
+     "end": 19.387
+    },
+    {
+     "w": "seven",
+     "start": 19.387,
+     "end": 20.05
+    },
+    {
+     "w": "And",
+     "start": 20.15,
+     "end": 20.287
+    },
+    {
+     "w": "the",
+     "start": 20.287,
+     "end": 20.412
+    },
+    {
+     "w": "hours",
+     "start": 20.412,
+     "end": 20.775
+    },
+    {
+     "w": "still",
+     "start": 20.775,
+     "end": 21.037
+    },
+    {
+     "w": "in",
+     "start": 21.037,
+     "end": 21.112
+    },
+    {
+     "w": "the",
+     "start": 21.112,
+     "end": 21.212
+    },
+    {
+     "w": "heat",
+     "start": 21.212,
+     "end": 21.5
+    },
+    {
+     "w": "aren't",
+     "start": 21.5,
+     "end": 21.7
+    },
+    {
+     "w": "hidden",
+     "start": 21.7,
+     "end": 22.3
+    },
+    {
+     "w": "They're",
+     "start": 22.425,
+     "end": 22.65
+    },
+    {
+     "w": "flagged",
+     "start": 22.65,
+     "end": 23.125
+    },
+    {
+     "w": "for",
+     "start": 23.125,
+     "end": 23.237
+    },
+    {
+     "w": "a",
+     "start": 23.237,
+     "end": 23.3
+    },
+    {
+     "w": "decision",
+     "start": 23.3,
+     "end": 24.1
+    }
+   ]
+  },
+  "S05": {
+   "file": "audio/voice/S05.wav",
+   "lead": 0.3,
+   "duration": 12.7,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "The",
+     "start": 0.275,
+     "end": 0.35
+    },
+    {
+     "w": "result",
+     "start": 0.35,
+     "end": 1.1
+    },
+    {
+     "w": "work",
+     "start": 1.238,
+     "end": 1.512
+    },
+    {
+     "w": "in",
+     "start": 1.512,
+     "end": 1.587
+    },
+    {
+     "w": "the",
+     "start": 1.587,
+     "end": 1.675
+    },
+    {
+     "w": "heat",
+     "start": 1.675,
+     "end": 1.962
+    },
+    {
+     "w": "window",
+     "start": 1.962,
+     "end": 2.388
+    },
+    {
+     "w": "drops",
+     "start": 2.388,
+     "end": 2.75
+    },
+    {
+     "w": "from",
+     "start": 2.75,
+     "end": 2.925
+    },
+    {
+     "w": "135",
+     "start": 2.925,
+     "end": 4.1
+    },
+    {
+     "w": "worker-hours",
+     "start": 4.1,
+     "end": 4.7
+    },
+    {
+     "w": "to",
+     "start": 4.7,
+     "end": 4.838
+    },
+    {
+     "w": "60",
+     "start": 4.838,
+     "end": 5.65
+    },
+    {
+     "w": "and",
+     "start": 5.775,
+     "end": 5.9
+    },
+    {
+     "w": "all",
+     "start": 5.9,
+     "end": 6.138
+    },
+    {
+     "w": "270",
+     "start": 6.138,
+     "end": 7.138
+    },
+    {
+     "w": "hours",
+     "start": 7.138,
+     "end": 7.513
+    },
+    {
+     "w": "of",
+     "start": 7.513,
+     "end": 7.6
+    },
+    {
+     "w": "work",
+     "start": 7.6,
+     "end": 7.888
+    },
+    {
+     "w": "still",
+     "start": 7.888,
+     "end": 8.175
+    },
+    {
+     "w": "get",
+     "start": 8.175,
+     "end": 8.35
+    },
+    {
+     "w": "done",
+     "start": 8.35,
+     "end": 9.075
+    },
+    {
+     "w": "The",
+     "start": 9.238,
+     "end": 9.35
+    },
+    {
+     "w": "remaining",
+     "start": 9.35,
+     "end": 9.863
+    },
+    {
+     "w": "60",
+     "start": 9.863,
+     "end": 10.3
+    },
+    {
+     "w": "stay",
+     "start": 10.3,
+     "end": 10.75
+    },
+    {
+     "w": "on",
+     "start": 10.75,
+     "end": 10.863
+    },
+    {
+     "w": "the",
+     "start": 10.863,
+     "end": 10.963
+    },
+    {
+     "w": "supervisor's",
+     "start": 10.963,
+     "end": 11.7
+    },
+    {
+     "w": "radar",
+     "start": 11.7,
+     "end": 12.45
+    }
+   ]
+  },
+  "S06": {
+   "file": "audio/voice/S06.wav",
+   "lead": 0.3,
+   "duration": 15.75,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "One",
+     "start": 0.3,
+     "end": 0.5
+    },
+    {
+     "w": "approval",
+     "start": 0.5,
+     "end": 1.012
+    },
+    {
+     "w": "turns",
+     "start": 1.012,
+     "end": 1.387
+    },
+    {
+     "w": "the",
+     "start": 1.387,
+     "end": 1.475
+    },
+    {
+     "w": "plan",
+     "start": 1.475,
+     "end": 1.762
+    },
+    {
+     "w": "into",
+     "start": 1.762,
+     "end": 2.0
+    },
+    {
+     "w": "action",
+     "start": 2.0,
+     "end": 2.9
+    },
+    {
+     "w": "HeatOps",
+     "start": 3.038,
+     "end": 3.625
+    },
+    {
+     "w": "assigns",
+     "start": 3.625,
+     "end": 4.125
+    },
+    {
+     "w": "a",
+     "start": 4.125,
+     "end": 4.237
+    },
+    {
+     "w": "schedule",
+     "start": 4.237,
+     "end": 4.725
+    },
+    {
+     "w": "notice",
+     "start": 4.725,
+     "end": 5.375
+    },
+    {
+     "w": "readiness",
+     "start": 5.487,
+     "end": 5.938
+    },
+    {
+     "w": "checks",
+     "start": 5.938,
+     "end": 6.275
+    },
+    {
+     "w": "for",
+     "start": 6.275,
+     "end": 6.438
+    },
+    {
+     "w": "water",
+     "start": 6.438,
+     "end": 6.825
+    },
+    {
+     "w": "and",
+     "start": 6.825,
+     "end": 6.963
+    },
+    {
+     "w": "shade",
+     "start": 6.963,
+     "end": 7.6
+    },
+    {
+     "w": "and",
+     "start": 7.7,
+     "end": 7.812
+    },
+    {
+     "w": "a",
+     "start": 7.812,
+     "end": 7.888
+    },
+    {
+     "w": "follow-up",
+     "start": 7.888,
+     "end": 8.45
+    },
+    {
+     "w": "for",
+     "start": 8.45,
+     "end": 8.562
+    },
+    {
+     "w": "the",
+     "start": 8.562,
+     "end": 8.65
+    },
+    {
+     "w": "remaining",
+     "start": 8.65,
+     "end": 9.15
+    },
+    {
+     "w": "risk",
+     "start": 9.15,
+     "end": 9.925
+    },
+    {
+     "w": "On",
+     "start": 10.088,
+     "end": 10.338
+    },
+    {
+     "w": "site",
+     "start": 10.338,
+     "end": 10.825
+    },
+    {
+     "w": "the",
+     "start": 10.925,
+     "end": 11.062
+    },
+    {
+     "w": "supervisor",
+     "start": 11.062,
+     "end": 11.7
+    },
+    {
+     "w": "confirms",
+     "start": 11.7,
+     "end": 12.25
+    },
+    {
+     "w": "they've",
+     "start": 12.25,
+     "end": 12.5
+    },
+    {
+     "w": "read",
+     "start": 12.5,
+     "end": 12.7
+    },
+    {
+     "w": "it",
+     "start": 12.7,
+     "end": 13.0
+    },
+    {
+     "w": "and",
+     "start": 13.075,
+     "end": 13.2
+    },
+    {
+     "w": "reports",
+     "start": 13.2,
+     "end": 13.688
+    },
+    {
+     "w": "when",
+     "start": 13.688,
+     "end": 13.812
+    },
+    {
+     "w": "the",
+     "start": 13.812,
+     "end": 13.912
+    },
+    {
+     "w": "crew",
+     "start": 13.912,
+     "end": 14.225
+    },
+    {
+     "w": "is",
+     "start": 14.225,
+     "end": 14.387
+    },
+    {
+     "w": "actually",
+     "start": 14.387,
+     "end": 14.85
+    },
+    {
+     "w": "ready",
+     "start": 14.85,
+     "end": 15.5
+    }
+   ]
+  },
+  "S07": {
+   "file": "audio/voice/S07.wav",
+   "lead": 0.6,
+   "duration": 9.3,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "And",
+     "start": 0.275,
+     "end": 0.412
+    },
+    {
+     "w": "if",
+     "start": 0.412,
+     "end": 0.512
+    },
+    {
+     "w": "a",
+     "start": 0.512,
+     "end": 0.613
+    },
+    {
+     "w": "check",
+     "start": 0.613,
+     "end": 0.863
+    },
+    {
+     "w": "is",
+     "start": 0.863,
+     "end": 1.0
+    },
+    {
+     "w": "missed",
+     "start": 1.0,
+     "end": 1.6
+    },
+    {
+     "w": "HeatOps",
+     "start": 3.65,
+     "end": 4.125
+    },
+    {
+     "w": "doesn't",
+     "start": 4.125,
+     "end": 4.388
+    },
+    {
+     "w": "assume",
+     "start": 4.388,
+     "end": 5.15
+    },
+    {
+     "w": "The",
+     "start": 5.275,
+     "end": 5.375
+    },
+    {
+     "w": "task",
+     "start": 5.375,
+     "end": 5.75
+    },
+    {
+     "w": "goes",
+     "start": 5.75,
+     "end": 5.987
+    },
+    {
+     "w": "overdue",
+     "start": 5.987,
+     "end": 6.6
+    },
+    {
+     "w": "and",
+     "start": 6.7,
+     "end": 6.825
+    },
+    {
+     "w": "lands",
+     "start": 6.825,
+     "end": 7.138
+    },
+    {
+     "w": "on",
+     "start": 7.138,
+     "end": 7.237
+    },
+    {
+     "w": "the",
+     "start": 7.237,
+     "end": 7.325
+    },
+    {
+     "w": "operations",
+     "start": 7.325,
+     "end": 8.062
+    },
+    {
+     "w": "lead's",
+     "start": 8.062,
+     "end": 8.4
+    },
+    {
+     "w": "board",
+     "start": 8.4,
+     "end": 9.025
+    }
+   ]
+  },
+  "S08": {
+   "file": "audio/voice/S08.wav",
+   "lead": 0.5,
+   "duration": 20.7,
+   "speed": 1.03,
+   "words": [
+    {
+     "w": "Under",
+     "start": 0.275,
+     "end": 0.487
+    },
+    {
+     "w": "the",
+     "start": 0.487,
+     "end": 0.575
+    },
+    {
+     "w": "hood",
+     "start": 0.575,
+     "end": 0.875
+    },
+    {
+     "w": "it's",
+     "start": 0.95,
+     "end": 1.113
+    },
+    {
+     "w": "all",
+     "start": 1.113,
+     "end": 1.275
+    },
+    {
+     "w": "AWS",
+     "start": 1.275,
+     "end": 1.925
+    },
+    {
+     "w": "The",
+     "start": 2.025,
+     "end": 2.15
+    },
+    {
+     "w": "web",
+     "start": 2.15,
+     "end": 2.375
+    },
+    {
+     "w": "app",
+     "start": 2.375,
+     "end": 2.562
+    },
+    {
+     "w": "on",
+     "start": 2.562,
+     "end": 2.675
+    },
+    {
+     "w": "Amplify",
+     "start": 2.675,
+     "end": 3.237
+    },
+    {
+     "w": "talks",
+     "start": 3.237,
+     "end": 3.575
+    },
+    {
+     "w": "to",
+     "start": 3.575,
+     "end": 3.712
+    },
+    {
+     "w": "API",
+     "start": 3.712,
+     "end": 4.275
+    },
+    {
+     "w": "Gateway",
+     "start": 4.275,
+     "end": 4.725
+    },
+    {
+     "w": "and",
+     "start": 4.725,
+     "end": 4.85
+    },
+    {
+     "w": "Lambda",
+     "start": 4.85,
+     "end": 5.6
+    },
+    {
+     "w": "Planning",
+     "start": 5.787,
+     "end": 6.237
+    },
+    {
+     "w": "runs",
+     "start": 6.237,
+     "end": 6.675
+    },
+    {
+     "w": "as",
+     "start": 6.675,
+     "end": 6.787
+    },
+    {
+     "w": "a",
+     "start": 6.787,
+     "end": 6.85
+    },
+    {
+     "w": "background",
+     "start": 6.85,
+     "end": 7.438
+    },
+    {
+     "w": "job",
+     "start": 7.438,
+     "end": 7.838
+    },
+    {
+     "w": "through",
+     "start": 7.838,
+     "end": 8.075
+    },
+    {
+     "w": "SQS",
+     "start": 8.075,
+     "end": 8.95
+    },
+    {
+     "w": "where",
+     "start": 9.05,
+     "end": 9.188
+    },
+    {
+     "w": "a",
+     "start": 9.188,
+     "end": 9.25
+    },
+    {
+     "w": "Strands",
+     "start": 9.25,
+     "end": 9.65
+    },
+    {
+     "w": "agent",
+     "start": 9.65,
+     "end": 10.025
+    },
+    {
+     "w": "calls",
+     "start": 10.025,
+     "end": 10.338
+    },
+    {
+     "w": "Amazon",
+     "start": 10.338,
+     "end": 10.85
+    },
+    {
+     "w": "Bedrock",
+     "start": 10.85,
+     "end": 11.412
+    },
+    {
+     "w": "and",
+     "start": 11.412,
+     "end": 11.537
+    },
+    {
+     "w": "our",
+     "start": 11.537,
+     "end": 11.675
+    },
+    {
+     "w": "scheduling",
+     "start": 11.675,
+     "end": 12.15
+    },
+    {
+     "w": "tools",
+     "start": 12.15,
+     "end": 12.975
+    },
+    {
+     "w": "Every",
+     "start": 13.137,
+     "end": 13.463
+    },
+    {
+     "w": "plan",
+     "start": 13.463,
+     "end": 13.925
+    },
+    {
+     "w": "revision",
+     "start": 14.0,
+     "end": 14.525
+    },
+    {
+     "w": "and",
+     "start": 14.6,
+     "end": 14.762
+    },
+    {
+     "w": "audit",
+     "start": 14.762,
+     "end": 15.075
+    },
+    {
+     "w": "event",
+     "start": 15.075,
+     "end": 15.438
+    },
+    {
+     "w": "lives",
+     "start": 15.438,
+     "end": 15.775
+    },
+    {
+     "w": "in",
+     "start": 15.775,
+     "end": 15.925
+    },
+    {
+     "w": "DynamoDB",
+     "start": 15.925,
+     "end": 17.025
+    },
+    {
+     "w": "And",
+     "start": 17.125,
+     "end": 17.275
+    },
+    {
+     "w": "every",
+     "start": 17.275,
+     "end": 17.575
+    },
+    {
+     "w": "minute",
+     "start": 17.575,
+     "end": 18.075
+    },
+    {
+     "w": "EventBridge",
+     "start": 18.175,
+     "end": 18.762
+    },
+    {
+     "w": "checks",
+     "start": 18.762,
+     "end": 19.1
+    },
+    {
+     "w": "for",
+     "start": 19.1,
+     "end": 19.25
+    },
+    {
+     "w": "anything",
+     "start": 19.25,
+     "end": 19.6
+    },
+    {
+     "w": "that's",
+     "start": 19.6,
+     "end": 19.837
+    },
+    {
+     "w": "slipped",
+     "start": 19.837,
+     "end": 20.45
+    }
+   ]
+  },
+  "S09": {
+   "file": "audio/voice/S09.wav",
+   "lead": 0.3,
+   "duration": 4.85,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "And",
+     "start": 0.25,
+     "end": 0.4
+    },
+    {
+     "w": "here's",
+     "start": 0.4,
+     "end": 0.688
+    },
+    {
+     "w": "that",
+     "start": 0.688,
+     "end": 0.912
+    },
+    {
+     "w": "same",
+     "start": 0.912,
+     "end": 1.25
+    },
+    {
+     "w": "run",
+     "start": 1.25,
+     "end": 1.488
+    },
+    {
+     "w": "in",
+     "start": 1.488,
+     "end": 1.575
+    },
+    {
+     "w": "CloudWatch",
+     "start": 1.575,
+     "end": 2.4
+    },
+    {
+     "w": "One",
+     "start": 2.562,
+     "end": 2.825
+    },
+    {
+     "w": "run",
+     "start": 2.825,
+     "end": 3.05
+    },
+    {
+     "w": "ID",
+     "start": 3.05,
+     "end": 3.55
+    },
+    {
+     "w": "end",
+     "start": 3.65,
+     "end": 3.875
+    },
+    {
+     "w": "to",
+     "start": 3.875,
+     "end": 4.025
+    },
+    {
+     "w": "end",
+     "start": 4.025,
+     "end": 4.6
+    }
+   ]
+  },
+  "S10": {
+   "file": "audio/voice/S10.wav",
+   "lead": 0.9,
+   "duration": 4.175,
+   "speed": 1.0,
+   "words": [
+    {
+     "w": "HeatOps",
+     "start": 0.275,
+     "end": 0.85
+    },
+    {
+     "w": "Tomorrow's",
+     "start": 0.9,
+     "end": 1.35
+    },
+    {
+     "w": "heat",
+     "start": 1.35,
+     "end": 1.55
+    },
+    {
+     "w": "forecast",
+     "start": 1.55,
+     "end": 2.35
+    },
+    {
+     "w": "Tonight's",
+     "start": 2.487,
+     "end": 2.9
+    },
+    {
+     "w": "action",
+     "start": 2.9,
+     "end": 3.3
+    },
+    {
+     "w": "plan",
+     "start": 3.3,
+     "end": 3.925
+    }
+   ]
+  }
+ }
+}

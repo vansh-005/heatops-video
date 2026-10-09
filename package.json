@@ -32,12 +32,13 @@
     "build": "remotion bundle",
     "lint": "eslint src && tsc",
     "captions": "node --no-warnings scripts/export-captions.mts",
-    "scratch-voice": "npm run captions && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/scratch-voice.ps1",
     "validate": "node --no-warnings scripts/validate-manifest.mts",
-    "render:opening": "remotion render src/index.ts S01-Hook out/draft/opening-proof.mp4",
+    "render:opening": "remotion render src/index.ts S01-Problem out/draft/opening-proof.mp4",
     "render:preview": "npm run captions && remotion render src/index.ts HeatOpsDemo out/draft/heatops-preview-540p.mp4 --props video-props.draft.json --scale=0.5",
-    "render:draft": "npm run validate && npm run captions && remotion render src/index.ts HeatOpsDemo out/draft/heatops-draft.mp4 --props video-props.draft.json && remotion still src/index.ts HeatOpsPoster out/draft/heatops-poster-draft.png && node --no-warnings scripts/qa-render.mts out/draft/heatops-draft.mp4",
-    "render:final": "node --no-warnings scripts/validate-manifest.mts --final && npm run captions && remotion render src/index.ts HeatOpsDemo out/heatops-final.mp4 --props video-props.json && remotion still src/index.ts HeatOpsPoster out/heatops-poster.png --props video-props.json && node --no-warnings scripts/qa-render.mts out/heatops-final.mp4 --final",
-    "upgrade": "remotion upgrade"
+    "render:draft": "npm run validate && npm run captions && remotion render src/index.ts HeatOpsDemo out/draft/heatops-draft-raw.mp4 --props video-props.draft.json && node --no-warnings scripts/master-audio.mts out/draft/heatops-draft-raw.mp4 out/draft/heatops-draft.mp4 && remotion still src/index.ts HeatOpsPoster out/draft/heatops-poster-draft.png && node --no-warnings scripts/qa-render.mts out/draft/heatops-draft.mp4",
+    "render:final": "node --no-warnings scripts/validate-manifest.mts --final && npm run captions && remotion render src/index.ts HeatOpsDemo out/draft/heatops-final-raw.mp4 --props video-props.json && node --no-warnings scripts/master-audio.mts out/draft/heatops-final-raw.mp4 out/heatops-final.mp4 && remotion still src/index.ts HeatOpsPoster out/heatops-poster.png --props video-props.json && node --no-warnings scripts/qa-render.mts out/heatops-final.mp4 --final",
+    "upgrade": "remotion upgrade",
+    "voice": ".venv-tts\\Scripts\\python scripts/tts.py && npm run captions",
+    "sound": ".venv-tts\\Scripts\\python scripts/sound.py"
   }
 }

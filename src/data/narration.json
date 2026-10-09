@@ -1,17 +1,38 @@
 {
   "status": "draft_script",
-  "note": "Draft narration adapted from brief/demo.md to the locked scene timings. {tokens} are filled from asset-manifest facts. Replace scene timing with explicit cues once the real voiceover is recorded.",
-  "scenes": {
-    "S01": "Tomorrow, {workers} people are scheduled to work outdoors at this site. The forecast says it will be hot. But a heat warning doesn't rearrange a workday.",
-    "S02": "This is HeatOps: tomorrow's heat forecast, tonight's action plan. We use a clearly labeled synthetic weather scenario so the workflow is reproducible. The baseline puts every afternoon block inside the flagged window.",
-    "S03": "HeatOps checks the weather, reads crew and task constraints, and compares feasible schedules. Calculation tools measure overlap with our demo screening threshold, and the agent explains the result. Its first proposal moves Crew A earlier, starting at six.",
-    "S04": "But the supervisor knows something the forecast doesn't: the gate can't open until seven. We change that constraint. HeatOps marks the old proposal outdated, calls the planner again, and produces a new revision. Crew A now starts at seven. Its last half hour, and Crew B's locked afternoon, still overlap the hot window, and they stay visible.",
-    "S05": "In this scenario, scheduled exposure above the screening threshold falls from {baseline} to {revised} worker-hours, while all {taskHours} outdoor task-hours remain scheduled. {revised} flagged hours still need a decision. This is not a declaration that the site is safe.",
-    "S06": "The supervisor approves this revision for coordination. HeatOps creates a schedule notice, readiness checks, and a task to resolve the remaining exposure. On the mobile view, acknowledging receipt and reporting readiness are separate actions.",
-    "S07": "Now we advance the labeled demo clock. An unfinished readiness check becomes overdue and appears for the operations lead. A notification is not treated as completed preparation.",
-    "S08": "Requests go through API Gateway to Lambda. Agent jobs run from an SQS queue, using Strands with Amazon Bedrock. DynamoDB stores revisions and audit events, and EventBridge checks for missed actions.",
-    "S09": "Here is the matching run in the deployed service's logs.",
-    "S10": "HeatOps connects a forecast to a feasible plan, a responsible person, and a follow-up. Next, we validate it with site supervisors."
+  "voice": {
+    "engine": "kokoro-82m",
+    "voice": "af_heart",
+    "speed": 1.0
   },
-  "cues": null
+  "note": "Story: problem -> how HeatOps fixes it -> how it runs on AWS. {tokens} are filled from asset-manifest facts. Scene audio starts at scene start + leadSeconds. Run `npm run voice` after editing. A '||' marker inserts a beat (1 s, or pauseSeconds per scene).",
+  "leadSeconds": {
+    "S01": 1.0,
+    "S02": 0.3,
+    "S03": 0.6,
+    "S04": 0.9,
+    "S05": 0.3,
+    "S06": 0.3,
+    "S07": 0.6,
+    "S08": 0.5,
+    "S09": 0.3,
+    "S10": 0.9
+  },
+  "scenes": {
+    "S01": "Tomorrow, {workers} workers are scheduled outdoors at Yamuna Works in Delhi. By one p.m., it will feel like forty-one degrees, right when half the day's work is planned. A heat warning tells you it's going to be hot. It doesn't tell you what to change, who needs to know, or whether anyone actually did it.",
+    "S02": "This is HeatOps. The night before, the supervisor sees tomorrow's plan against the forecast: every crew, every task, and every hour that lands in the heat.",
+    "S03": "One click, and the HeatOps agent gets to work. || It pulls the forecast, reads the site's constraints, and compares schedules that actually fit. Its first idea: start Crew A at six, before the heat builds.",
+    "S04": "But the supervisor knows something the forecast doesn't. The gate doesn't open until seven. || So they change it. || The old plan is instantly marked outdated, and the agent replans around the new constraint. || Crew A now starts at seven. And the hours still in the heat aren't hidden. They're flagged for a decision.",
+    "S05": "The result: work in the heat window drops from {baseline} worker-hours to {revised}, and all {taskHours} hours of work still get done. The remaining {revised} stay on the supervisor's radar.",
+    "S06": "One approval turns the plan into action. HeatOps assigns a schedule notice, readiness checks for water and shade, and a follow-up for the remaining risk. On site, the supervisor confirms they've read it, and reports when the crew is actually ready.",
+    "S07": "And if a check is missed? || HeatOps doesn't assume. The task goes overdue, and lands on the operations lead's board.",
+    "S08": "Under the hood, it's all AWS. The web app on Amplify talks to API Gateway and Lambda. Planning runs as a background job through SQS, where a Strands agent calls Amazon Bedrock and our scheduling tools. Every plan, revision, and audit event lives in DynamoDB. And every minute, EventBridge checks for anything that's slipped.",
+    "S09": "And here's that same run in CloudWatch. One run ID, end to end.",
+    "S10": "HeatOps. Tomorrow's heat forecast. Tonight's action plan."
+  },
+  "cues": null,
+  "pauseSeconds": {
+    "S04": 1.5,
+    "S07": 1.5
+  }
 }

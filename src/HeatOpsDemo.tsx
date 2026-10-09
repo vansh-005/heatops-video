@@ -1,26 +1,19 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Audio } from "@remotion/media";
-import { AbsoluteFill, Sequence, Series, staticFile, useVideoConfig } from "remotion";
+import { AbsoluteFill, Sequence, staticFile, useVideoConfig } from "remotion";
 import { z } from "zod";
 import { CaptionTrack } from "./components/CaptionTrack";
 import { buildCues } from "./data/captions";
 import { manifest } from "./data/manifest";
 import { ModeProvider, RenderMode } from "./data/mode";
 import narration from "./data/narration.json";
-import scratchVoice from "./data/scratch-voice.json";
-import { SCENES } from "./data/timeline";
-import { S01Hook } from "./scenes/S01Hook";
-import { S04TurningPoint } from "./scenes/S04TurningPoint";
-import { S08Architecture } from "./scenes/S08Architecture";
+import { musicVolume, sfxCues } from "./data/sound";
+import { SCENES, SceneId, TOTAL_FRAMES } from "./data/timeline";
+import { voiceTiming } from "./data/voice";
+import { Act1Problem } from "./scenes/Act1Problem";
+import { AppStage, STAGE_END, STAGE_START } from "./scenes/AppStage";
+import { AWS_ACT_FRAMES, AwsAct } from "./scenes/AwsAct";
 import { S10Close } from "./scenes/S10Close";
-import {
-  S02Overview,
-  S03AgentPlan,
-  S05Comparison,
-  S06ApproveAck,
-  S07Overdue,
-  S09AwsProof,
-} from "./scenes/FootageScenes";
 import { C, F } from "./theme";
 
 export const heatOpsSchema = z.object({
@@ -29,16 +22,14 @@ export const heatOpsSchema = z.object({
 
 type Props = z.infer<typeof heatOpsSchema>;
 
-type ScratchCue = { file: string; start: number; duration: number };
-
-/** In-composition gate; scripts/validate-manifest.ts runs the full checks before rendering. */
+/** In-composition gate; scripts/validate-manifest.mts runs the full checks before rendering. */
 const assertFinalReady = (mode: RenderMode) => {
   if (mode !== "final") return;
   const problems: string[] = [];
   if (!manifest.finalRenderAllowed) problems.push("manifest.finalRenderAllowed is false");
   if (manifest.mode !== "final") problems.push("manifest.mode is not final");
   if (!manifest.facts.verified) problems.push("facts are not verified");
-  if (manifest.narration.status !== "ready" || !manifest.narration.finalApproved) problems.push("final narration missing");
+  if (manifest.narration.status !== "ready" || !manifest.narration.finalApproved) problems.push("narration not approved");
   for (const c of manifest.clips) {
     if (c.status !== "ready" || !c.verified) problems.push(`${c.shotId} not ready+verified`);
   }
@@ -48,56 +39,56 @@ const assertFinalReady = (mode: RenderMode) => {
 export const HeatOpsDemo: React.FC<Props> = ({ mode }) => {
   const { fps } = useVideoConfig();
   assertFinalReady(mode);
-  const cues = buildCues(narration as never, SCENES, manifest.facts, fps);
-  const realVoice = manifest.narration.status === "ready";
+  const recorded = manifest.narration.kind === "recorded" && manifest.narration.status === "ready";
+  const cues = buildCues(narration as never, SCENES, manifest.facts, fps, recorded ? null : voiceTiming.scenes);
+  const music = useMemo(() => musicVolume(TOTAL_FRAMES, fps), [fps]);
 
   return (
     <ModeProvider mode={mode}>
       <AbsoluteFill style={{ background: C.canvas }}>
-        <Series>
-          <Series.Sequence name="S01 Hook" durationInFrames={360} premountFor={fps}>
-            <S01Hook />
-          </Series.Sequence>
-          <Series.Sequence name="S02 Site overview" durationInFrames={480} premountFor={fps}>
-            <S02Overview />
-          </Series.Sequence>
-          <Series.Sequence name="S03 Agent plan" durationInFrames={600} premountFor={fps}>
-            <S03AgentPlan />
-          </Series.Sequence>
-          <Series.Sequence name="S04 Turning point" durationInFrames={900} premountFor={fps}>
-            <S04TurningPoint />
-          </Series.Sequence>
-          <Series.Sequence name="S05 Comparison" durationInFrames={600} premountFor={fps}>
-            <S05Comparison />
-          </Series.Sequence>
-          <Series.Sequence name="S06 Approve + acknowledge" durationInFrames={720} premountFor={fps}>
-            <S06ApproveAck />
-          </Series.Sequence>
-          <Series.Sequence name="S07 Overdue" durationInFrames={480} premountFor={fps}>
-            <S07Overdue />
-          </Series.Sequence>
-          <Series.Sequence name="S08 Architecture" durationInFrames={420} premountFor={fps}>
-            <S08Architecture />
-          </Series.Sequence>
-          <Series.Sequence name="S09 AWS proof" durationInFrames={240} premountFor={fps}>
-            <S09AwsProof />
-          </Series.Sequence>
-          <Series.Sequence name="S10 Close" durationInFrames={300} premountFor={fps}>
-            <S10Close />
-          </Series.Sequence>
-        </Series>
+        {/* Layer order matters: each act sits above the one it hands off from. */}
+        <Sequence name="Product journey (S02–S07)" from={STAGE_START} durationInFrames={STAGE_END - STAGE_START} premountFor={fps}>
+          <AppStage />
+        </Sequence>
+        <Sequence name="Problem (S01)" from={SCENES.S01.from} durationInFrames={SCENES.S01.frames} premountFor={fps}>
+          <Act1Problem />
+        </Sequence>
+        <Sequence name="Close (S10)" from={SCENES.S10.from} durationInFrames={SCENES.S10.frames} premountFor={fps}>
+          <S10Close />
+        </Sequence>
+        <Sequence name="AWS (S08–S09)" from={SCENES.S08.from} durationInFrames={AWS_ACT_FRAMES + 12} premountFor={fps}>
+          <AwsAct />
+        </Sequence>
 
-        {realVoice ? (
+        {recorded ? (
           <Sequence name="Narration" from={Math.round((manifest.narration.offsetSeconds ?? 0) * fps)} premountFor={fps}>
             <Audio src={staticFile(manifest.narration.path)} />
           </Sequence>
-        ) : mode === "draft" ? (
-          (scratchVoice as ScratchCue[]).map((c) => (
-            <Sequence key={c.file} name="Scratch voice" from={Math.round(c.start * fps)} premountFor={fps}>
-              <Audio src={staticFile(c.file)} />
-            </Sequence>
-          ))
+        ) : (
+          (Object.keys(voiceTiming.scenes) as SceneId[]).map((sid) => {
+            const v = voiceTiming.scenes[sid];
+            return (
+              <Sequence
+                key={sid}
+                name={`Voice ${sid}`}
+                from={SCENES[sid].from + Math.round(v.lead * fps)}
+                durationInFrames={Math.ceil(v.duration * fps) + 6}
+                premountFor={fps}
+              >
+                <Audio src={staticFile(v.file)} />
+              </Sequence>
+            );
+          })
+        )}
+
+        {manifest.music?.enabled !== false ? (
+          <Audio name="Music bed (original)" src={staticFile("audio/bed.mp3")} volume={(f) => music[Math.min(f, TOTAL_FRAMES - 1)]} />
         ) : null}
+        {sfxCues().map((c) => (
+          <Sequence key={c.name} name={c.name} from={c.frame} durationInFrames={3 * fps} premountFor={fps}>
+            <Audio src={staticFile(c.src)} volume={c.volume} />
+          </Sequence>
+        ))}
 
         <CaptionTrack cues={cues} />
 
@@ -106,15 +97,15 @@ export const HeatOpsDemo: React.FC<Props> = ({ mode }) => {
             style={{
               position: "absolute",
               right: 22,
-              bottom: 14,
+              bottom: 12,
               fontFamily: F.mono,
-              fontSize: 17,
+              fontSize: 16,
               color: C.amber,
               fontWeight: 600,
               letterSpacing: 0.5,
             }}
           >
-            {realVoice || scratchVoice.length === 0 ? "DRAFT PREVIEW" : "DRAFT · SCRATCH TTS VOICE (TEMPORARY)"}
+            DRAFT PREVIEW
           </div>
         ) : null}
       </AbsoluteFill>

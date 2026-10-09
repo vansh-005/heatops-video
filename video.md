@@ -1,62 +1,52 @@
 # Creative and edit blueprint
 
+Revised 2026-10-09 on Vansh's direction: the video should sell the product. Story: **problem → how HeatOps fixes it → how it runs on AWS**. The narration doesn't explain synthetic versus real data. The app's own source badge stays visible in captured footage, and the opening calls the site a "sample site", but neither is narrated.
+
 ## Format
 
-170 seconds, 1920×1080, 30 fps, 5100 frames. Approximately 80% real app/AWS footage, 20% dedicated motion graphics. Overlays can enhance the real footage throughout. These proportions are a design choice, not an event requirement.
+170 seconds, 1920×1080, 30 fps, 5100 frames. Three acts plus a close, edited as one continuous piece rather than separate cards. Each act hands off to the next by morphing the same frame.
 
-Hook: **“A heat warning doesn't rearrange a workday.”** Follow quickly with a supervisor's concrete constraint. Close: **“Tomorrow's heat forecast. Tonight's action plan.”**
+Hook: the heat day at a real-feeling site, ending on three questions a forecast can't answer. Close: **"Tomorrow's heat forecast. Tonight's action plan."**
 
-Use motion to explain what changes: hot hours appear; a work block shifts; a constraint blocks the first plan; the revised block retains a red overlap; assignments become acknowledged or overdue. This is more useful than decorative animation.
+## Edit skeleton
 
-## Locked edit skeleton
-
-| Shot | Seconds | Frames [start,end) | Content | Can start before app? |
+| Shot | Seconds | Frames [start,end) | Content | Source |
 |---|---|---|---|---|
-| S01 | 0–12 | 0–360 | Animated day timeline, afternoon heat band, 45-worker label, hook | Yes, label illustrative scenario |
-| S02 | 12–28 | 360–840 | Actual site overview, source badge, baseline | Layout and placeholder only |
-| S03 | 28–48 | 840–1440 | Actual agent tool receipts and first proposal | Overlay shell only |
-| S04 | 48–78 | 1440–2340 | Gate 06:00 → 07:00, invalidate, rerun, revised schedule | Transition/callout design only |
-| S05 | 78–98 | 2340–2940 | Actual comparison; subtle numeric callout, remaining exposure | Draft graphic with fixture label |
-| S06 | 98–122 | 2940–3660 | Approval drawer, task creation, mobile acknowledgment | Layout only |
-| S07 | 122–138 | 3660–4140 | Pending readiness check, labeled clock advance, overdue event | Layout only |
-| S08 | 138–152 | 4140–4560 | Animated architecture explanation | Yes, mark provisional until verified |
-| S09 | 152–160 | 4560–4800 | Actual AWS deployment/log evidence with matching run ID | Placeholder only |
-| S10 | 160–170 | 4800–5100 | Final takeaway, logo/title, optional real URL | Yes; URL remains pending |
+| S01 | 0–22 | 0–660 | **Problem.** 45 worker dots form two crews on tomorrow's timeline. The feels-like curve crosses 40 °C at 1 p.m. and the afternoon blocks turn red. A heat warning appears, then: *What changes? Who needs to know? Did it happen?* The frame then shrinks into the app frame. | Motion graphic |
+| S02 | 22–34 | 660–1020 | **Fix:** site plan against the forecast | App capture |
+| S03 | 34–52 | 1020–1560 | Agent assesses (tool calls), first idea: Crew A at 06:00 | App capture |
+| S04 | 52–82 | 1560–2460 | **Turning point.** Gate 06:00 → 07:00 card, old plan outdated, replan, "new plan" overlay with the shift and remaining red hours | App capture + overlay |
+| S05 | 82–98 | 2460–2940 | Result: 135 → 60 worker-hours in the heat, 270 hours kept, 60 flagged for a decision | App capture + checklist metric |
+| S06 | 98–118 | 2940–3540 | Approval → tasks; on site, *Read* then *Ready* | App capture |
+| S07 | 118–132 | 3540–3960 | Missed check → overdue → operations lead (demo clock chip) | App capture |
+| S08 | 132–154 | 3960–4620 | **AWS.** App frame shrinks into the "Web app" node. The architecture builds word by word as a request pulse travels Amplify → API Gateway → Lambda → SQS → Strands agent ↔ Bedrock → DynamoDB, then the EventBridge follow-up path. | Motion graphic |
+| S09 | 154–162 | 4620–4860 | CloudWatch proof grows out of the CloudWatch node, with a matching run ID | AWS capture |
+| S10 | 162–170 | 4860–5100 | Wordmark + tagline | Motion graphic |
 
-S04 is the turning point. Keep enough actual interaction visible to prove the plan responds to a changed constraint. A transformed drawing alone does not demonstrate this capability.
+S02–S07 play inside one persistent app frame with a **"Tomorrow's heat plan"** checklist beside it (Assess → Correct → Better plan → Approve → Follow through). Captures crossfade inside the frame. Each slot starts 20 frames before its scene for the crossfade, so captures need that much extra head.
+
+S04 is the turning point. The real capture must show the actual interaction. The overlay cards only emphasise it.
 
 ## Motion direction
 
-Palette mirrors frontend.md: warm canvas #F7F5EF, ink #172B35, teal #147D78, amber #965600, red #B83232. Use filled rectangles and precise typography. Motion curves should feel responsive and restrained; large transitions about 0.3–0.6 seconds, with long enough holds to read the information.
-
-Title size 64–84px at 1080p, callouts 36–48px, captions at least 32px. Keep about 64px safe margins. Hold metrics for 4–6 seconds. Avoid full dashboard scaled down beside long paragraphs. Crop into the relevant UI region, retain context/source labels, and show an occasional full-screen view to orient the viewer.
-
-Architecture scene: show web/API → queued agent → Bedrock/tools/state, then the timer's follow-up path. Use a few readable groups instead of every service icon. Actual AWS evidence follows immediately; diagrams alone are not proof of deployment.
+- **Palette:** warm canvas #F7F5EF, ink #172B35, teal #147D78, amber #965600, red #B83232. Inter for UI, Source Serif 4 for headlines, JetBrains Mono for times and IDs.
+- **Sync to speech:** visuals are keyed to spoken words via `at(scene, word)` (src/data/voice.ts), so beats land on the voice. Re-running `npm run voice` re-syncs everything.
+- **Continuity over cuts:** no fade-to-blank between scenes. The opening shrinks into the app frame, the app frame shrinks into the architecture, and the proof grows out of a node.
+- **Readability:** restrained motion, about 0.4–0.9 s moves, captions 36 px at the bottom, 64 px safe margins.
 
 ## Narration and sound
 
-Use brief/demo.md's narration as source material; revise transitions to match this timing. Aim roughly 330–360 spoken words, leaving room for pauses. The user should record a scratch reading early on a phone or microphone in a quiet room, then record final audio after the actual app footage is placed. Split by scene or record a clean continuous track plus pickups; use 48 kHz WAV if available.
+- **Script:** src/data/narration.json, about 335 words. `||` inserts a one-second beat.
+- **Draft voice:** Kokoro-82M (Apache-2.0, local, stock voice `af_heart`, no cloning), generated by `npm run voice`. It writes one WAV per scene plus word timings, which drive both captions and animation timing.
+- **Final voice:** Vansh decides.
+  - Keep the Kokoro voice: set `narration.status: "ready"` and `finalApproved: true`.
+  - Or record his own: `kind: "recorded"`, `public/audio/narration.wav` at 48 kHz, then caption alignment.
+- **Music:** optional and licensed only.
 
-The video agent can use temporary clearly labeled scratch narration to time scenes. Paid TTS and voice cloning are not required. Avoid generating finished voice audio before the script is aligned to real footage; it creates avoidable rework.
+## Rendering
 
-Captions follow the actual audio, including late script edits. Keep them away from buttons/metrics. Music is optional; speech and product evidence matter more. Do not accelerate narration to squeeze in more service names.
+- `npm run render:preview` renders a fast 540p preview.
+- `npm run render:draft` renders the full draft and runs QA.
+- `npm run render:final` validates the manifest and evidence first and refuses to render without real captures, verified facts and approved narration.
 
-## Rendering strategy
-
-Local rendering first. Implement a fast low-resolution preview for review and a final 1080p render. The target invocation after scaffolding is:
-
-```powershell
-npx remotion render src/index.ts HeatOpsDemo out/heatops-final.mp4 --codec h264 --pixel-format yuv420p --props video-props.json
-```
-
-The scaffold may choose a different entry path; document the actual path. Implement `render:final` to run manifest/evidence validation before this command. A properties file avoids Windows inline-JSON quoting issues. This example is not an already-working command in this starter pack.
-
-Render a short sample first to uncover browser/font/codec issues. Final render must not fetch live weather, call Bedrock, or depend on app availability. It consumes local captures and verified handoff data.
-
-## Review ladder
-
-1. Opening proof: does the first 12 seconds communicate a work-planning problem?
-2. Complete rough edit: does the turning point make sense with placeholder slots?
-3. First real-footage pass: is every UI detail readable and each claim supported?
-4. Final narration pass: are captions/pauses aligned?
-5. Full rendered MP4: playback, actual duration, evidence labels, and audio checked.
+No network calls happen during a final render.

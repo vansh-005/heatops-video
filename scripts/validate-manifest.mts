@@ -7,8 +7,9 @@ import { join } from "node:path";
 
 const FINAL = process.argv.includes("--final");
 const FPS = 30;
-// Frames each footage slot must fill (S04's slot is the 525-frame middle of its 900-frame scene).
-const SLOT_FRAMES: Record<string, number> = { S02: 480, S03: 600, S04: 525, S05: 600, S06: 720, S07: 480, S09: 240 };
+// Frames each footage slot must fill: scene length + 20-frame crossfade pre-roll for app shots (src/data/timeline.ts).
+const SLOT_FRAMES: Record<string, number> = { S02: 380, S03: 560, S04: 920, S05: 500, S06: 620, S07: 440, S09: 240 };
+const SCENE_SECONDS: Record<string, number> = { S01: 22, S02: 12, S03: 18, S04: 30, S05: 16, S06: 20, S07: 14, S08: 22, S09: 8, S10: 8 };
 
 const m = JSON.parse(readFileSync("asset-manifest.json", "utf8"));
 const narrationDoc = JSON.parse(readFileSync("src/data/narration.json", "utf8"));
@@ -95,13 +96,28 @@ if (runIds.S09 && runIds.S09 !== runIds.S03 && runIds.S09 !== runIds.S04) bad("S
 
 // Narration + captions
 const n = m.narration;
-if (n.status !== "ready" || !n.finalApproved) bad("final narration not ready/approved");
-else if (!existsSync(join("public", n.path))) bad(`narration file public/${n.path} missing`);
-else {
-  const d = probeDuration(join("public", n.path));
-  if (d !== null && d + (n.offsetSeconds ?? 0) > 170) bad(`narration runs ${d.toFixed(1)}s past the 170s cut`);
+if (!n.finalApproved) bad("narration not approved by Vansh (narration.finalApproved)");
+if (n.kind === "recorded") {
+  if (n.status !== "ready") bad("recorded narration not ready");
+  else if (!existsSync(join("public", n.path))) bad(`narration file public/${n.path} missing`);
+  else {
+    const d = probeDuration(join("public", n.path));
+    if (d !== null && d + (n.offsetSeconds ?? 0) > 170) bad(`narration runs ${d.toFixed(1)}s past the 170s cut`);
+  }
+  if (narrationDoc.status !== "aligned_to_final_audio") bad(`captions not aligned to recorded audio (narration.json status: ${narrationDoc.status})`);
+} else {
+  // AI voice (Kokoro): per-scene files + word timings drive audio and captions.
+  const vt = existsSync("src/data/voice-timing.json") ? JSON.parse(readFileSync("src/data/voice-timing.json", "utf8")) : null;
+  if (!vt) bad("src/data/voice-timing.json missing (npm run voice)");
+  for (const sid of Object.keys(SCENE_SECONDS)) {
+    const v = vt?.scenes?.[sid];
+    if (!v) { bad(`voice for ${sid} missing`); continue; }
+    if (!existsSync(join("public", v.file))) bad(`voice file public/${v.file} missing`);
+    if (v.lead + v.duration > SCENE_SECONDS[sid]) bad(`voice ${sid} overruns its scene`);
+  }
+  if (n.status !== "ready") bad(`AI narration status is "${n.status}" (set "ready" once the script is final)`);
+  notes.push("narration uses the Kokoro AI voice: disclose AI narration in the submission if the event requires it");
 }
-if (narrationDoc.status !== "aligned_to_final_audio") bad(`captions not aligned to final audio (narration.json status: ${narrationDoc.status})`);
 if (!f.appUrl) notes.push("facts.appUrl is null: closing card omits the URL in final mode");
 
 console.log(`HeatOps manifest check (${FINAL ? "FINAL" : "draft"} mode)`);

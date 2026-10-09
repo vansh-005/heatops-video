@@ -99,9 +99,16 @@
     }
   ],
   "narration": {
+    "kind": "tts",
     "path": "audio/narration.wav",
-    "status": "missing",
-    "finalApproved": false
+    "status": "draft",
+    "finalApproved": false,
+    "note": "kind 'tts' = per-scene Kokoro voice from src/data/voice-timing.json (npm run voice). Switch to kind 'recorded' with status 'ready' for Vansh's recording."
   },
-  "finalRenderAllowed": false
+  "finalRenderAllowed": false,
+  "music": {
+    "enabled": true,
+    "source": "original, synthesized by scripts/sound.py",
+    "path": "audio/bed.mp3"
+  }
 }

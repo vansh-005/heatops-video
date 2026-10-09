@@ -15,12 +15,13 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Generated scratch narration (temporary TTS, regenerate with npm run scratch-voice)
-public/audio/scratch/
+# Local TTS environment (Kokoro); recreate per README
+.venv-tts/
 
 # Raw footage and final narration: large binaries, supplied by the app/Vansh.
 # Keep provenance in asset-manifest.json and evidence/; share media separately.
 public/footage/*.mp4
 public/footage/*.mov
 public/footage/*.webm
-public/audio/*.wav
+public/audio/narration*.wav
+public/audio/bed.wav

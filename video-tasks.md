@@ -56,3 +56,32 @@ None of these stand in for app interactions.
 **Blocked on the app/Vansh:** every real capture S02–S07 and S09, `evidence/facts.json` and `evidence.json`, and the final narration. The detailed list is in `FOOTAGE-REQUEST.md`.
 
 **Commands:** `npm run studio` · `npm run render:preview` (540p) · `npm run render:draft` · `npm run validate` · `npm run render:final` (gated)
+
+### 2026-10-09 — session 2: story, flow and voice rework (Vansh's feedback)
+
+Vansh's feedback: the animations are good, but the voice sounded mechanical, the edit felt like separate pieces, and it should sell the product without synthetic-data explanations.
+
+**Story** is now problem → how HeatOps fixes it → AWS. The skeleton is 22/12/18/30/16/20/14/22/8/8 s and is documented in video.md. The script is rewritten in a sales tone, about 335 words.
+
+**Continuity:**
+- The opening (worker dots → crews → feels-like curve crosses 40 °C → red afternoon → three questions) shrinks into the app frame.
+- S02–S07 play inside one persistent app frame with a "Tomorrow's heat plan" checklist that ticks off as the story moves. The gate-correction and "new plan" overlays play inside that same frame.
+- The app frame then shrinks into the "Web app" node. The architecture builds word by word while a request pulse travels through it.
+- The CloudWatch proof grows out of its node, and the close follows.
+- Old scene files were removed: S01Hook, S04TurningPoint, S08Architecture, FootageScenes, FootageStage.
+
+**Voice:**
+- Kokoro-82M runs locally in `.venv-tts` (setup: `python -m venv .venv-tts` then `.venv-tts\Scripts\pip install kokoro soundfile`). Stock voice `af_heart`, Apache-2.0 weights, no cloning. Generate with `npm run voice`.
+- It produces per-scene WAVs plus word timings. Captions (48 cues) and every animation beat are keyed to the spoken words via `at(scene, word)`.
+- The Windows SAPI scratch voice was removed.
+
+**Sound:**
+- An original ambient bed and whoosh/tick/pop/chime effects are synthesized by `scripts/sound.py` (`npm run sound`). They're project-owned with no samples.
+- The music ducks under speech by about 12 dB.
+- `scripts/master-audio.mts` normalizes the mix to -16 LUFS with two-pass loudnorm and copies the video stream.
+
+**Draft output:** `out/draft/heatops-draft.mp4`. QA on the real file: 170.1 s, 1920×1080, 30 fps, yuv420p, AAC, -16.0 LUFS, no black segments, no silences over 4 s.
+
+**Gate:** `npm run render:final` still exits 1 and produces no `out/heatops-final.mp4`. The remaining blockers are the real captures, verified facts and evidence, and narration approval.
+
+**Pending decisions for Vansh:** keep the AI voice or record his own. Music on or off (`asset-manifest.json` → `music.enabled`).
