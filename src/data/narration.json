@@ -1,0 +1,17 @@
+{
+  "status": "draft_script",
+  "note": "Draft narration adapted from brief/demo.md to the locked scene timings. {tokens} are filled from asset-manifest facts. Replace scene timing with explicit cues once the real voiceover is recorded.",
+  "scenes": {
+    "S01": "Tomorrow, {workers} people are scheduled to work outdoors at this site. The forecast says it will be hot. But a heat warning doesn't rearrange a workday.",
+    "S02": "This is HeatOps: tomorrow's heat forecast, tonight's action plan. We use a clearly labeled synthetic weather scenario so the workflow is reproducible. The baseline puts every afternoon block inside the flagged window.",
+    "S03": "HeatOps checks the weather, reads crew and task constraints, and compares feasible schedules. Calculation tools measure overlap with our demo screening threshold, and the agent explains the result. Its first proposal moves Crew A earlier, starting at six.",
+    "S04": "But the supervisor knows something the forecast doesn't: the gate can't open until seven. We change that constraint. HeatOps marks the old proposal outdated, calls the planner again, and produces a new revision. Crew A now starts at seven. Its last half hour, and Crew B's locked afternoon, still overlap the hot window, and they stay visible.",
+    "S05": "In this scenario, scheduled exposure above the screening threshold falls from {baseline} to {revised} worker-hours, while all {taskHours} outdoor task-hours remain scheduled. {revised} flagged hours still need a decision. This is not a declaration that the site is safe.",
+    "S06": "The supervisor approves this revision for coordination. HeatOps creates a schedule notice, readiness checks, and a task to resolve the remaining exposure. On the mobile view, acknowledging receipt and reporting readiness are separate actions.",
+    "S07": "Now we advance the labeled demo clock. An unfinished readiness check becomes overdue and appears for the operations lead. A notification is not treated as completed preparation.",
+    "S08": "Requests go through API Gateway to Lambda. Agent jobs run from an SQS queue, using Strands with Amazon Bedrock. DynamoDB stores revisions and audit events, and EventBridge checks for missed actions.",
+    "S09": "Here is the matching run in the deployed service's logs.",
+    "S10": "HeatOps connects a forecast to a feasible plan, a responsible person, and a follow-up. Next, we validate it with site supervisors."
+  },
+  "cues": null
+}

@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "delhi-heat-demo-v1",
+  "sourceMode": "synthetic",
+  "label": "Synthetic weather scenario; fictional site and crews",
+  "date": "2026-06-01",
+  "timezone": "Asia/Kolkata",
+  "site": {
+    "name": "Yamuna Works",
+    "latitude": 28.6139,
+    "longitude": 77.209,
+    "shadeCapacity": 45,
+    "waterReadiness": "UNCONFIRMED"
+  },
+  "policy": {
+    "id": "demo-screen-v1",
+    "metric": "apparent_temperature_c",
+    "flagAtOrAbove": 40,
+    "validationStatus": "ILLUSTRATIVE_NOT_VALIDATED",
+    "minGapMinutes": 30,
+    "maxShiftSpanMinutes": 480
+  },
+  "weather": {
+    "attribution": "Authored synthetic values; not Open-Meteo or IMD data",
+    "units": {
+      "temperature": "C",
+      "apparent_temperature": "C",
+      "relative_humidity": "percent"
+    },
+    "hourly": [
+      {
+        "time": "00:00",
+        "temperature_c": 28,
+        "apparent_temperature_c": 29,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "01:00",
+        "temperature_c": 27,
+        "apparent_temperature_c": 28,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "02:00",
+        "temperature_c": 27,
+        "apparent_temperature_c": 28,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "03:00",
+        "temperature_c": 26,
+        "apparent_temperature_c": 27,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "04:00",
+        "temperature_c": 26,
+        "apparent_temperature_c": 27,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "05:00",
+        "temperature_c": 27,
+        "apparent_temperature_c": 28,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "06:00",
+        "temperature_c": 28,
+        "apparent_temperature_c": 29,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "07:00",
+        "temperature_c": 30,
+        "apparent_temperature_c": 31,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "08:00",
+        "temperature_c": 32,
+        "apparent_temperature_c": 33,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "09:00",
+        "temperature_c": 34,
+        "apparent_temperature_c": 35,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "10:00",
+        "temperature_c": 36,
+        "apparent_temperature_c": 37,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "11:00",
+        "temperature_c": 38,
+        "apparent_temperature_c": 38,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "12:00",
+        "temperature_c": 40,
+        "apparent_temperature_c": 39,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "13:00",
+        "temperature_c": 42,
+        "apparent_temperature_c": 41,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "14:00",
+        "temperature_c": 44,
+        "apparent_temperature_c": 43,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "15:00",
+        "temperature_c": 43,
+        "apparent_temperature_c": 42,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "16:00",
+        "temperature_c": 40,
+        "apparent_temperature_c": 39,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "17:00",
+        "temperature_c": 37,
+        "apparent_temperature_c": 37,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "18:00",
+        "temperature_c": 34,
+        "apparent_temperature_c": 35,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "19:00",
+        "temperature_c": 32,
+        "apparent_temperature_c": 33,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "20:00",
+        "temperature_c": 31,
+        "apparent_temperature_c": 32,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "21:00",
+        "temperature_c": 30,
+        "apparent_temperature_c": 31,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "22:00",
+        "temperature_c": 29,
+        "apparent_temperature_c": 30,
+        "relative_humidity_percent": 35
+      },
+      {
+        "time": "23:00",
+        "temperature_c": 28,
+        "apparent_temperature_c": 29,
+        "relative_humidity_percent": 35
+      }
+    ]
+  },
+  "crews": {
+    "A": {
+      "count": 30,
+      "movable": true,
+      "availableStart": "06:00",
+      "availableEnd": "17:00"
+    },
+    "B": {
+      "count": 15,
+      "movable": false,
+      "availableStart": "06:00",
+      "availableEnd": "17:00"
+    }
+  },
+  "schedules": {
+    "baseline": {
+      "gateOpen": "06:00",
+      "blocks": {
+        "A": [
+          {
+            "start": "09:00",
+            "end": "12:00"
+          },
+          {
+            "start": "13:00",
+            "end": "16:00"
+          }
+        ],
+        "B": [
+          {
+            "start": "09:00",
+            "end": "12:00"
+          },
+          {
+            "start": "13:00",
+            "end": "16:00"
+          }
+        ]
+      }
+    },
+    "initial": {
+      "gateOpen": "06:00",
+      "blocks": {
+        "A": [
+          {
+            "start": "06:00",
+            "end": "09:00"
+          },
+          {
+            "start": "09:30",
+            "end": "12:30"
+          }
+        ],
+        "B": [
+          {
+            "start": "09:00",
+            "end": "12:00"
+          },
+          {
+            "start": "13:00",
+            "end": "16:00"
+          }
+        ]
+      }
+    },
+    "revised": {
+      "gateOpen": "07:00",
+      "blocks": {
+        "A": [
+          {
+            "start": "07:00",
+            "end": "10:00"
+          },
+          {
+            "start": "10:30",
+            "end": "13:30"
+          }
+        ],
+        "B": [
+          {
+            "start": "09:00",
+            "end": "12:00"
+          },
+          {
+            "start": "13:00",
+            "end": "16:00"
+          }
+        ]
+      }
+    }
+  },
+  "expected": {
+    "baseline": {
+      "flaggedWorkerHours": 135,
+      "taskWorkerHours": 270
+    },
+    "initial": {
+      "flaggedWorkerHours": 45,
+      "taskWorkerHours": 270
+    },
+    "revised": {
+      "flaggedWorkerHours": 60,
+      "taskWorkerHours": 270
+    },
+    "revisedReductionWorkerHours": 75,
+    "revisedReductionPercent": 55.55555555555556
+  }
+}

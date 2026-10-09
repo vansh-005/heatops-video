@@ -1,0 +1,11 @@
+{
+  "source": "copy of verified app export — replace every value",
+  "verifiedFromRunId": "<run id>",
+  "sourceMode": "synthetic",
+  "workers": 0,
+  "baselineFlaggedWorkerHours": 0,
+  "revisedFlaggedWorkerHours": 0,
+  "taskWorkerHours": 0,
+  "awsServices": [],
+  "appUrl": null
+}

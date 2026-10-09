@@ -1,0 +1,14 @@
+{
+  "captures": [
+    {
+      "shotId": "S03",
+      "file": "footage/03-agent-plan.mp4",
+      "runId": "<run id>",
+      "sessionId": "<session id>",
+      "capturedAt": "<ISO timestamp>",
+      "sourceIn": 0,
+      "sourceOut": 0,
+      "limitations": ""
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+[
+    {
+        "file":  "audio/scratch/cue-001.wav",
+        "start":  0.4,
+        "duration":  4.43
+    },
+    {
+        "file":  "audio/scratch/cue-002.wav",
+        "start":  5.311,
+        "duration":  2.325
+    },
+    {
+        "file":  "audio/scratch/cue-003.wav",
+        "start":  7.94,
+        "duration":  3.285
+    },
+    {
+        "file":  "audio/scratch/cue-004.wav",
+        "start":  12.4,
+        "duration":  2.15
+    },
+    {
+        "file":  "audio/scratch/cue-005.wav",
+        "start":  14.713,
+        "duration":  2.04
+    },
+    {
+        "file":  "audio/scratch/cue-006.wav",
+        "start":  17.026,
+        "duration":  2.635
+    },
+    {
+        "file":  "audio/scratch/cue-007.wav",
+        "start":  20,
+        "duration":  2.61
+    },
+    {
+        "file":  "audio/scratch/cue-008.wav",
+        "start":  22.908,
+        "duration":  2.715
+    },
+    {
+        "file":  "audio/scratch/cue-009.wav",
+        "start":  25.683,
+        "duration":  1.755
+    },
+    {
+        "file":  "audio/scratch/cue-010.wav",
+        "start":  28.4,
+        "duration":  3.325
+    },
+    {
+        "file":  "audio/scratch/cue-011.wav",
+        "start":  32.008,
+        "duration":  3.385
+    },
+    {
+        "file":  "audio/scratch/cue-012.wav",
+        "start":  35.471,
+        "duration":  4.14
+    },
+    {
+        "file":  "audio/scratch/cue-013.wav",
+        "start":  39.804,
+        "duration":  3.305
+    },
+    {
+        "file":  "audio/scratch/cue-014.wav",
+        "start":  43.267,
+        "duration":  4.11
+    },
+    {
+        "file":  "audio/scratch/cue-015.wav",
+        "start":  48.4,
+        "duration":  3.425
+    },
+    {
+        "file":  "audio/scratch/cue-016.wav",
+        "start":  52.461,
+        "duration":  3.45
+    },
+    {
+        "file":  "audio/scratch/cue-017.wav",
+        "start":  56.029,
+        "duration":  2.055
+    },
+    {
+        "file":  "audio/scratch/cue-018.wav",
+        "start":  58.364,
+        "duration":  3.34
+    },
+    {
+        "file":  "audio/scratch/cue-019.wav",
+        "start":  61.85,
+        "duration":  4.075
+    },
+    {
+        "file":  "audio/scratch/cue-020.wav",
+        "start":  66.404,
+        "duration":  2.085
+    },
+    {
+        "file":  "audio/scratch/cue-021.wav",
+        "start":  68.821,
+        "duration":  4.145
+    },
+    {
+        "file":  "audio/scratch/cue-022.wav",
+        "start":  73.129,
+        "duration":  3.96
+    },
+    {
+        "file":  "audio/scratch/cue-023.wav",
+        "start":  78.4,
+        "duration":  4.23
+    },
+    {
+        "file":  "audio/scratch/cue-024.wav",
+        "start":  82.9,
+        "duration":  3.51
+    },
+    {
+        "file":  "audio/scratch/cue-025.wav",
+        "start":  86.479,
+        "duration":  3.805
+    },
+    {
+        "file":  "audio/scratch/cue-026.wav",
+        "start":  90.519,
+        "duration":  2.815
+    },
+    {
+        "file":  "audio/scratch/cue-027.wav",
+        "start":  93.714,
+        "duration":  3.435
+    },
+    {
+        "file":  "audio/scratch/cue-028.wav",
+        "start":  98.4,
+        "duration":  3.915
+    },
+    {
+        "file":  "audio/scratch/cue-029.wav",
+        "start":  103.73,
+        "duration":  4.14
+    },
+    {
+        "file":  "audio/scratch/cue-030.wav",
+        "start":  108.781,
+        "duration":  3.255
+    },
+    {
+        "file":  "audio/scratch/cue-031.wav",
+        "start":  113.178,
+        "duration":  3.585
+    },
+    {
+        "file":  "audio/scratch/cue-032.wav",
+        "start":  117.576,
+        "duration":  3.05
+    },
+    {
+        "file":  "audio/scratch/cue-033.wav",
+        "start":  122.4,
+        "duration":  2.97
+    },
+    {
+        "file":  "audio/scratch/cue-034.wav",
+        "start":  125.745,
+        "duration":  3.515
+    },
+    {
+        "file":  "audio/scratch/cue-035.wav",
+        "start":  130,
+        "duration":  2.68
+    },
+    {
+        "file":  "audio/scratch/cue-036.wav",
+        "start":  132.848,
+        "duration":  4.05
+    },
+    {
+        "file":  "audio/scratch/cue-037.wav",
+        "start":  138.4,
+        "duration":  2.649
+    },
+    {
+        "file":  "audio/scratch/cue-038.wav",
+        "start":  141.241,
+        "duration":  2.213
+    },
+    {
+        "file":  "audio/scratch/cue-039.wav",
+        "start":  143.516,
+        "duration":  2.078
+    },
+    {
+        "file":  "audio/scratch/cue-040.wav",
+        "start":  145.855,
+        "duration":  2.805
+    },
+    {
+        "file":  "audio/scratch/cue-041.wav",
+        "start":  148.759,
+        "duration":  2.575
+    },
+    {
+        "file":  "audio/scratch/cue-042.wav",
+        "start":  152.4,
+        "duration":  3.73
+    },
+    {
+        "file":  "audio/scratch/cue-043.wav",
+        "start":  160.4,
+        "duration":  3.085
+    },
+    {
+        "file":  "audio/scratch/cue-044.wav",
+        "start":  163.758,
+        "duration":  2.443
+    },
+    {
+        "file":  "audio/scratch/cue-045.wav",
+        "start":  166.511,
+        "duration":  2.762
+    }
+]

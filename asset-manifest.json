@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "mode": "draft",
+  "composition": {
+    "id": "HeatOpsDemo",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 5100
+  },
+  "facts": {
+    "status": "expected_fixture_only",
+    "verified": false,
+    "sourceMode": "synthetic",
+    "workers": 45,
+    "baselineFlaggedWorkerHours": 135,
+    "revisedFlaggedWorkerHours": 60,
+    "taskWorkerHours": 270,
+    "reductionPercentDisplay": 55.6,
+    "appUrl": null
+  },
+  "clips": [
+    {
+      "shotId": "S02",
+      "path": "footage/02-overview.mp4",
+      "status": "missing",
+      "verified": false,
+      "kind": "real_capture_required",
+      "runId": null,
+      "capturedAt": null,
+      "sourceInSeconds": null,
+      "sourceOutSeconds": null
+    },
+    {
+      "shotId": "S03",
+      "path": "footage/03-agent-plan.mp4",
+      "status": "missing",
+      "verified": false,
+      "kind": "real_capture_required",
+      "runId": null,
+      "capturedAt": null,
+      "sourceInSeconds": null,
+      "sourceOutSeconds": null
+    },
+    {
+      "shotId": "S04",
+      "path": "footage/04-gate-replan.mp4",
+      "status": "missing",
+      "verified": false,
+      "kind": "real_capture_required",
+      "runId": null,
+      "capturedAt": null,
+      "sourceInSeconds": null,
+      "sourceOutSeconds": null
+    },
+    {
+      "shotId": "S05",
+      "path": "footage/05-comparison.mp4",
+      "status": "missing",
+      "verified": false,
+      "kind": "real_capture_required",
+      "runId": null,
+      "capturedAt": null,
+      "sourceInSeconds": null,
+      "sourceOutSeconds": null
+    },
+    {
+      "shotId": "S06",
+      "path": "footage/06-approve-ack.mp4",
+      "status": "missing",
+      "verified": false,
+      "kind": "real_capture_required",
+      "runId": null,
+      "capturedAt": null,
+      "sourceInSeconds": null,
+      "sourceOutSeconds": null
+    },
+    {
+      "shotId": "S07",
+      "path": "footage/07-overdue.mp4",
+      "status": "missing",
+      "verified": false,
+      "kind": "real_capture_required",
+      "runId": null,
+      "capturedAt": null,
+      "sourceInSeconds": null,
+      "sourceOutSeconds": null
+    },
+    {
+      "shotId": "S09",
+      "path": "footage/09-aws-proof.mp4",
+      "status": "missing",
+      "verified": false,
+      "kind": "real_capture_required",
+      "runId": null,
+      "capturedAt": null,
+      "sourceInSeconds": null,
+      "sourceOutSeconds": null
+    }
+  ],
+  "narration": {
+    "path": "audio/narration.wav",
+    "status": "missing",
+    "finalApproved": false
+  },
+  "finalRenderAllowed": false
+}
